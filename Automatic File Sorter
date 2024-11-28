@@ -32,37 +32,3 @@ There are files in this path that were not moved
 There are files in this path that were not moved
 There are files in this path that were not moved
 
- 
-BMI Calculator
-#BMI = (weight * 703) / (height * height)
-Name = input("Enter your name: ")
-
-Weight = int(input("Enter your weight in pounds: "))
-
-Height = int(input("Enter your height in inched: "))
-
-BMI = (Weight * 703) / (Height * Height)
-
-print(BMI)
-
-if BMI > 0:
-    if (BMI<18.5):
-        print(Name +", you are underweight.")
-    elif (BMI<=24.9):
-        print(Name +", you are normal weight.")
-    elif (BMI<=29.9):
-        print(Name +", you are overweight. You need to exercise more, stop eatting so much.")
-    elif (BMI<=34.9):
-        print(Name +", you are obese.")
-    elif (BMI<39.9):
-        print(Name +", you are severely obese.")
-    else:
-        print(Name +", you are morbidly obese.")
-else:
-    print("Enter valid input")
-
-Enter your name:  Michael
-Enter your weight in pounds:  170
-Enter your height in inched:  69
-25.101869355177485
-Michael, you are overweight. You need to exercise more, stop eatting so much.
