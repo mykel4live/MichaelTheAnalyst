@@ -1,0 +1,33 @@
+Automated File Sorter
+import os, shutil
+path = r"C:/Users/44786/Desktop/Data Analysis/Python/Python Tutorial 3/Automated File Sorter/"
+file_name = os.listdir(path)
+
+print(file_name)
+['20240129_040734.jpg', 'ADESINA M.I Signature.jpg', 'chat.txt', 'csv files', 'finger.jpg', 'image files', 'MIKE UK DATA 1.xlsx', 'text files']
+os.path.exists(path + 'csv files')
+False
+folder_names = ['csv files', 'image files', 'text files']
+
+for loop in range(0,3):
+    if not os.path.exists(path + folder_names[loop]):
+        print(path + folder_names[loop])
+        os.makedirs(path + folder_names[loop])
+C:/Users/44786/Desktop/Data Analysis/Python/Python Tutorial 3/Automated File Sorter/csv files
+C:/Users/44786/Desktop/Data Analysis/Python/Python Tutorial 3/Automated File Sorter/image files
+C:/Users/44786/Desktop/Data Analysis/Python/Python Tutorial 3/Automated File Sorter/text files
+for file in file_name:
+    if ".csv" in file and not os.path.exists(path + "csv files/" +file):
+        shutil.move(path + file, path + "csv files/" + file)
+    elif ".png" in file and not os.path.exists(path + "images files/" +file):
+        shutil.move(path + file, path + "images files/" + file)
+    elif ".txt" in file and not os.path.exists(path + "text files/" +file):
+        shutil.move(path + file, path + "text files/" + file)
+    elif ".xlsx" in file and not os.path.exists(path + "csv files/" +file):
+        shutil.move(path + file, path + "csv files/" + file)
+    else:
+        print("There are files in this path that were not moved")
+
+There are files in this path that were not moved
+There are files in this path that were not moved
+There are files in this path that were not moved
